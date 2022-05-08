@@ -16,7 +16,7 @@ def upload_file():
         path = os.path.join('./', pdf.filename)
         print(path)
         pdf.save(path)
-        return send_file(sign("doc.pdf"), as_attachment=True)
+        return send_file(sign(path), as_attachment=True)
     else:
         return 'POST file to proceed', 200
 
