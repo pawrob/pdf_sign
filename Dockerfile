@@ -17,7 +17,7 @@ RUN wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.16.tar.gz \
 RUN apt-get update && apt-get install -y swig vim
 
 
-RUN pip install  flask endesive cryptography
+RUN pip install  flask endesive cryptography PyPDF2 mysql-connector-python
 COPY . .
 COPY . .
 
@@ -25,5 +25,6 @@ RUN useradd -ms /bin/bash  flask
 RUN chown -R flask:flask /app
 RUN chmod 777 /app
 USER flask
+EXPOSE 5000
 
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
