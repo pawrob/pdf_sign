@@ -5,7 +5,7 @@ BLOCK_PREFIX = 'PSZI_AA_BLOCK'
 
 def get_connection():
     db = mysql.connector.connect(
-        host="db",
+        host="172.30.252.36",
         user="root",
         password="ydfas67FDASdf67tgfs",
         database="pdf_signatures"
